@@ -12,6 +12,7 @@ class Solution {
         TreeNode root = new TreeNode(mid.val);
         root.left = build(left, mid);
         root.right = build(mid.next, right);
+
         return root;
     }
 

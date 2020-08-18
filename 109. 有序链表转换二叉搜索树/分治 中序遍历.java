@@ -10,12 +10,16 @@ class Solution {
         if (left > right) {
             return null;
         }
+
         int mid = left + (right - left + 1) / 2;
         TreeNode root = new TreeNode();
         root.left = build(left, mid - 1);
+
         root.val = now.val;
         now = now.next;
+
         root.right = build(mid + 1, right);
+
         return root;
     }
 
